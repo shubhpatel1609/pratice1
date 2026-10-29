@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shubh Patel — Cloud & DevOps Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pipeline progress bar -->
+  <div class="pipeline-bar" id="pipelineBar" aria-hidden="true">
+    <div class="pipeline-track">
+      <div class="pipeline-fill" id="pipelineFill"></div>
+    </div>
+    <div class="pipeline-stages">
+      <div class="stage" data-stage="0"><span class="stage-dot"></span><span class="stage-label">checkout</span></div>
+      <div class="stage" data-stage="1"><span class="stage-dot"></span><span class="stage-label">build</span></div>
+      <div class="stage" data-stage="2"><span class="stage-dot"></span><span class="stage-label">test</span></div>
+      <div class="stage" data-stage="3"><span class="stage-dot"></span><span class="stage-label">deploy</span></div>
+    </div>
+  </div>
+
+  <nav class="topnav">
+    <div class="topnav-brand">shubh-patel<span class="dim">/career</span></div>
+    <div class="topnav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="checkout">
+    <div class="terminal-window">
+      <div class="terminal-titlebar">
+        <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+        <span class="terminal-path">shubh@career:~$</span>
+      </div>
+      <div class="terminal-body">
+        <p class="term-line"><span class="prompt">$</span> git clone https://github.com/shubhpatel1609/career.git</p>
+        <p class="term-line dim">Cloning into 'career'... done.</p>
+        <p class="term-line"><span class="prompt">$</span> whoami</p>
+        <h1 class="hero-name">Shubh Patel</h1>
+        <p class="hero-tagline">Cloud &amp; DevOps engineer in training — I turn red pipelines into green ones. AWS, CI/CD, containers, and Linux, one debugged YAML file at a time.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="build-status">
+          <span class="badge badge-pass">● build passing</span>
+          <span class="badge-meta">last deploy: this week · main branch</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="section-eyebrow">01 · checkout</span>
+      <h2>README.md</h2>
+    </div>
+    <div class="readme-card">
+      <div class="readme-titlebar">README.md</div>
+      <div class="readme-body">
+        <p><strong>Shubh Patel</strong> is a hands-on cloud and DevOps practitioner, currently building infrastructure skills through real labs instead of just slides — provisioning EC2 fleets, wiring up load balancers, and chasing down the occasional 503 until it's actually fixed.</p>
+        <p>Recent work spans <strong>RHEL 9 administration</strong>, <strong>containerized deployments with Docker</strong>, and end-to-end <strong>CI/CD pipelines</strong> that build, push, and ship code to live servers without a human clicking "deploy" by hand.</p>
+        <p>Also builds <strong>full stack web applications</strong>, using <strong>Docker</strong> for containerization, <strong>GitHub</strong> for version control and collaboration, and <strong>VS Code</strong> as the daily driver for writing, debugging, and shipping code.</p>
+        <p>Comfortable being the person who reads the error log line by line — because that's usually where the fix is hiding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-head">
+      <span class="section-eyebrow">02 · build</span>
+      <h2>Services running</h2>
+      <p class="section-sub">A console view of the stack, all systems operational.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">EC2 / S3 / ALB</span><span class="status-dot"></span></div>
+        <p class="service-desc">Provisioning compute, static hosting with scoped bucket policies, and load balancing across instances.</p>
+        <span class="service-tag">AWS</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">GitHub Actions</span><span class="status-dot"></span></div>
+        <p class="service-desc">CI/CD workflows for build → push → deploy, including self-hosted runners on EC2.</p>
+        <span class="service-tag">CI/CD</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">Jenkins</span><span class="status-dot"></span></div>
+        <p class="service-desc">Freestyle jobs and build pipelines, batch and shell build steps, config persistence.</p>
+        <span class="service-tag">CI/CD</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">Docker</span><span class="status-dot"></span></div>
+        <p class="service-desc">Containerized static sites and services, image builds pushed to Docker Hub.</p>
+        <span class="service-tag">Containers</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">RHEL / Linux</span><span class="status-dot"></span></div>
+        <p class="service-desc">Package management, local offline repos, systemd services, log-driven troubleshooting.</p>
+        <span class="service-tag">OS</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">Nginx</span><span class="status-dot"></span></div>
+        <p class="service-desc">Reverse proxy and static hosting configs, diagnosing 503s down to the root cause.</p>
+        <span class="service-tag">Web server</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">Bash / PowerShell</span><span class="status-dot"></span></div>
+        <p class="service-desc">Setup scripts for Linux and Windows server environments, kept consistent across both.</p>
+        <span class="service-tag">Scripting</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">Git / GitHub</span><span class="status-dot"></span></div>
+        <p class="service-desc">Version control, repo hygiene, and everyday collaboration workflows.</p>
+        <span class="service-tag">Tooling</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">Full Stack Development</span><span class="status-dot"></span></div>
+        <p class="service-desc">Building end-to-end web applications — frontend, backend, and deployment — using Docker, GitHub, and VS Code.</p>
+        <span class="service-tag">Full Stack</span>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top"><span class="service-name">VS Code</span><span class="status-dot"></span></div>
+        <p class="service-desc">Primary editor for full stack projects — extensions, debugging, integrated terminal, and Git workflows.</p>
+        <span class="service-tag">IDE</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-head">
+      <span class="section-eyebrow">03 · test</span>
+      <h2>Deployment history</h2>
+      <p class="section-sub">Recent shipped work, most recent first.</p>
+    </div>
+
+    <div class="deploy-log">
+
+      <div class="deploy-entry">
+        <div class="deploy-meta">
+          <span class="deploy-hash">#0f3a2c1</span>
+          <span class="badge badge-pass">passing</span>
+        </div>
+        <h3>GitHub Actions → Docker Hub → EC2 pipeline</h3>
+        <p>A two-workflow CI/CD setup: one builds and pushes a Docker image to Docker Hub, the other deploys it to a live EC2 instance over SSH using <code>appleboy/ssh-action</code>. Ironed out YAML indentation bugs and missing registry logins along the way.</p>
+        <div class="deploy-tags"><span>GitHub Actions</span><span>Docker</span><span>EC2</span></div>
+      </div>
+
+      <div class="deploy-entry">
+        <div class="deploy-meta">
+          <span class="deploy-hash">#7b91e4d</span>
+          <span class="badge badge-pass">passing</span>
+        </div>
+        <h3>Self-hosted GitHub Actions runner on EC2</h3>
+        <p>End-to-end automated deployment for a static site: launched the EC2 instance, installed Nginx, registered a self-hosted runner, and wrote the workflow YAML to deploy on every push.</p>
+        <div class="deploy-tags"><span>EC2</span><span>Nginx</span><span>Self-hosted runner</span></div>
+      </div>
+
+      <div class="deploy-entry">
+        <div class="deploy-meta">
+          <span class="deploy-hash">#3a08c92</span>
+          <span class="badge badge-warn">rebuilt</span>
+        </div>
+        <h3>Rsync deployments with Nginx</h3>
+        <p>Iterated on <code>easingthemes/ssh-deploy</code> and <code>appleboy/ssh-action</code> workflows, cleaning up redundant install steps and fixing path mismatches between secrets and server config.</p>
+        <div class="deploy-tags"><span>GitHub Actions</span><span>Nginx</span><span>rsync</span></div>
+      </div>
+
+      <div class="deploy-entry">
+        <div class="deploy-meta">
+          <span class="deploy-hash">#e2419fa</span>
+          <span class="badge badge-pass">passing</span>
+        </div>
+        <h3>S3 static website hosting</h3>
+        <p>Scoped bucket policies so only <code>index.html</code> is public while the rest of the bucket stays private, comparing bucket policies against ACLs for fine-grained access control.</p>
+        <div class="deploy-tags"><span>AWS S3</span><span>IAM</span></div>
+      </div>
+
+      <div class="deploy-entry">
+        <div class="deploy-meta">
+          <span class="deploy-hash">#a1d0071</span>
+          <span class="badge badge-pass">passing</span>
+        </div>
+        <h3>Cross-platform web server setup scripts</h3>
+        <p>Matching Nginx (bash, Ubuntu) and IIS (PowerShell, Windows) setup scripts, styled consistently for a multi-server load balancing lab.</p>
+        <div class="deploy-tags"><span>Bash</span><span>PowerShell</span><span>IIS</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="section-head">
+      <span class="section-eyebrow">04 · deploy</span>
+      <h2>Release notes</h2>
+      <p class="section-sub">Open to opportunities, collaborations, and interesting infrastructure problems.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-links">
+        <a href="https://github.com/shubhpatel1609" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">github.com/shubhpatel1609</span>
+        </a>
+        <a href="mailto:youremail@example.com" class="contact-link">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">youremail@example.com</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">add your profile link</span>
+        </a>
+      </div>
+      <p class="contact-note">// replace the placeholders above with your real email and LinkedIn URL in index.html</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Shubh Patel</span>
+    <span class="footer-dim">build passing · deployed with care</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
